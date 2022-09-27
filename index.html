@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS对象</title>
+</head>
+
+<body>
+    <script>
+        // let obj3 = { 'name': 'frank', 'age': 18 }//第一种写法
+        // let obj2 = new Object({ 'name': 'frank' })//第二种写法
+        // console.log({ 'name': 'frank', 'age': 18 })//第三种写法
+        // Object.keys(obj)
+        // let a = 'xxx'
+        // var obj = {
+        //     [a]: 22222
+        // }
+        // let b = symbol()
+        // var obj = { [b]: 'hello' }
+        // let obj = { 'name': 'frank', 'age': 18 }
+        // delete obj.name//写法一
+        // delete obj['name']//写法二 他们都是删除了name属性，既删除属性名又删除属性值
+        // 'xxx' in obj && obj.xxx
+        // console.dir(obj)
+        // obj.hasOwnProperty('toString')
+        // obj.['key']
+        // obj.key
+        // obj[key]//变量key值一般不为key
+        // let obj = { 'name': 'Peter' }//name是字符串
+        // obj.name = 'Tommy'//name依然是字符 等价于下面一行
+        // obj['name'] = 'Tommy'//也等价于下面一行
+        // obj['na' + 'me'] = 'Tommy'
+        // let key = 'name'; key[name] = 'Peter'//或者声明一个变量,让key等于变量的值再进行赋值
+        // Object.assign(obj, { age: 18, gender: 'man' })//一个赋值API，先写给谁赋值，然后写赋值内容
+        // let obj = {}
+        // let obj2 = {}//他们共有toString属性
+        // obj.toString = 'xxx'//只会改变obj自身的属性，obj2.toString还在原型上
+        // obj.__proto__.toString = 'xxx'//这种不推荐
+        // Object.prototype.toString = 'xxx'
+        let common = { name: 'xxx' }
+        let obj = Object.create(common)
+        obj.name = 'Peter'
+        let obj2 = Object.create(common)
+        obj2.name = 'Tommy'
+    </script>
+</body>
+
+</html>
